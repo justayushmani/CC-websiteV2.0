@@ -4,14 +4,14 @@ import { PinContainer } from "./PinContainer";
 
 const Offering = () => {
   return (
-    <div className="offering-container ">
+    <div className="offering-container overflow-x-hidden w-full h-screen">
       <div className="offering-main">
         <div className="text text-white">
           <h2>
             Our <span>Initiatives</span>
           </h2>
         </div>
-        <div className="cards-container flex flex-row  justify ">
+        <div className="cards-container flex flex-row flex-wrap justify-center gap-6">
           <PinContainer title=" Coding WorkSpaces & Upskill" href="">
             <div className="flex basis-full flex-col cards   bg-transparent backdrop-blur-sm p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[22rem] h-[25rem] ">
               <h3 className="max-w-xs !pb-2 !m-0 font-bold text-start  text-base text-slate-100">
