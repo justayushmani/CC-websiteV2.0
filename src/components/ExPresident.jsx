@@ -144,7 +144,7 @@ const ExPresident = () => {
             />
             
            
-            <div className="absolute top-0 left-0 right-0 p-6 bg-gradient-to-b from-black/70 via-black/40 to-transparent z-10">
+            <div className="absolute top-0 left-0 right-0 p-6 bg-linear-to-b from-black/70 via-black/40 to-transparent z-10">
               <h3 className="text-white text-2xl font-bold mb-2">{president.name}</h3>
               <p className="text-blue-300 text-sm font-medium mb-1">{president.skill}</p>
               <p className="text-gray-200 text-sm">{president.role}</p>
@@ -181,14 +181,14 @@ const ExPresident = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-6">
+    <div className="min-h-screen  py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="lg:sticky lg:top-24 mt-40">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Our Legacy Leaders
             </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 mb-8"></div>
+            <div className="h-1 w-24 bg-linear-to-r from-blue-600 to-purple-600 mb-8"></div>
             
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Throughout our organization's history, we've been fortunate to have exceptional leaders who have shaped our vision and driven our success. Each president has brought unique perspectives, innovative ideas, and unwavering dedication to our community.

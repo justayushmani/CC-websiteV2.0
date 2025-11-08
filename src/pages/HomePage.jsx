@@ -7,8 +7,8 @@ export default function HomePage() {
   return (
     <div className="w-full  overflow-x-hidden">
       <Landing />
-      <Offering/>
       <About />
+      <Offering/>
       <ExPresident />
       
     </div>
