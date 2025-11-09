@@ -1,8 +1,6 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import Galaxy from "./Galaxy";
-import logo from "../../public/logo.png";
-import { FloatingDock } from "./ui/floating-dock";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   IconHome,
   IconCalendar,
@@ -10,7 +8,11 @@ import {
   IconMail,
   IconTrophy,
 } from "@tabler/icons-react";
-import "../styles/Landing.css"; 
+import "../styles/Landing.css";
+
+import Galaxy from "../components/Galaxy";
+import { FloatingNav } from "./FloatingNavbar";
+import logo from "../../public/logo.png";
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -23,40 +25,42 @@ export default function Landing() {
   };
 
   const navLinks = [
-    {
-      title: "Home",
-      icon: <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#home",
-      onClick: () => scrollToSection("#home"),
-    },
-    {
-      title: "Events",
-      icon: <IconCalendar className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "/events",
-      onClick: () => navigate("/events"),
-    },
-    {
-      title: "Team",
-      icon: <IconUsers className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "/team",
-      onClick: () => navigate("/team"),
-    },
-    {
-      title: "Achievements",
-      icon: <IconTrophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#achievements",
-      onClick: () => scrollToSection("#achievements"),
-    },
-    {
-      title: "Contact",
-      icon: <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#contact",
-      onClick: () => scrollToSection("#contact"),
-    },
-  ];
+  {
+    title: "Home",
+    icon: <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+    href: "#home",
+    onClick: () => navigate("/home"),
+  },
+  {
+    title: "Events",
+    icon: <IconCalendar className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+    href: "/events",
+    onClick: () => navigate("/events"),
+  },
+  {
+    title: "Team",
+    icon: <IconUsers className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+    href: "/team",
+    onClick: () => navigate("/team"),
+  },
+  {
+    title: "Achievements",
+    icon: <IconTrophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+    href: "#achievements",
+    onClick: () => scrollToSection("#achievements"),
+  },
+  {
+    title: "Contact",
+    icon: <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+    href: "/contact",
+    onClick: () => navigate("/contact"),
+  },
+];
+
 
   return (
     <div className="relative w-full bg-black text-white overflow-x-hidden">
+   
       <div className="fixed top-4 left-4 z-50">
         <img
           src={logo}
@@ -65,13 +69,15 @@ export default function Landing() {
         />
       </div>
 
-      <FloatingDock items={navLinks} />
-
       
+      <FloatingNav navItems={navLinks} />
+
+     
       <section
         id="home"
         className="relative min-h-screen w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between overflow-hidden px-4 sm:px-6 md:px-10"
       >
+       
         <motion.div
           style={{ opacity: galaxyOpacity }}
           className="absolute inset-0 h-full w-full z-0"
@@ -89,50 +95,51 @@ export default function Landing() {
           />
         </motion.div>
 
-       <motion.div
-  initial={{ opacity: 0, x: -50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  className="z-10 text-center lg:text-left space-y-10 w-full lg:w-1/2 landing-text"
->
-  <div className="space-y-4">
-    <motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.3, duration: 0.6 }}
-  className="font-bold leading-[1.1] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mx-auto lg:mx-0 text-center lg:text-left whitespace-nowrap"
->
-  <div>
-    <span className="font-bold text-white">Cooking</span>{" "}
-    <span className="font-light text-white/80">code,</span>
-  </div>
-  <div className="mt-2 sm:mt-3">
-    <span className="font-bold text-white">Building</span>{" "}
-    <span className="font-light text-white/80">community</span>
-  </div>
-</motion.h1>
+    
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="z-10 text-center lg:text-left space-y-10 w-full lg:w-1/2 landing-text"
+        >
+          <div className="space-y-4">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="font-bold leading-[1.1] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mx-auto lg:mx-0 text-center lg:text-left"
+            >
+              <div>
+                <span className="font-bold text-white">Cooking</span>{" "}
+                <span className="font-light text-white/80">code,</span>
+              </div>
+              <div className="mt-2 sm:mt-3">
+                <span className="font-bold text-white">Building</span>{" "}
+                <span className="font-light text-white/80">community</span>
+              </div>
+            </motion.h1>
+          </div>
 
-  </div>
+         
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="flex flex-wrap justify-center lg:justify-start gap-4 mt-12"
+          >
+            <button className="group landing-btn-primary cursor-pointer">
+              <span className="relative z-10">Get Started</span>
+              <div className="absolute inset-0 bg-linear-to-r from-blue-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+            </button>
 
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.5, duration: 0.6 }}
-    className="flex flex-wrap justify-center lg:justify-start gap-4 mt-12"
-  >
-    <button className="group landing-btn-primary cursor-pointer">
-      <span className="relative z-10">Get Started</span>
-      <div className="absolute inset-0 bg-linear-to-r from-blue-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-    </button>
+            <button className="group landing-btn-secondary cursor-pointer">
+              <span className="relative z-10">Learn More</span>
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+            </button>
+          </motion.div>
+        </motion.div>
 
-    <button className="group landing-btn-secondary cursor-pointer">
-      <span className="relative z-10">Learn More</span>
-      <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-    </button>
-  </motion.div>
-</motion.div>
-
-
+        
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

@@ -34,7 +34,7 @@ const ExPresident = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
+    handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -45,8 +45,8 @@ const ExPresident = () => {
       name: "Tanishq Srivastava",
       skill: "Full Stack Flutter Developer",
       role: "President 2020-2021",
-      image: "../../public/tanishq-bhaiya.webp",
-      profileImg: "../../public/tanishq-bhaiya.webp",
+      image: "/tanishq-bhaiya.webp",
+      profileImg: "/tanishq-bhaiya.webp",
       username: "@tanishq ",
       linkedin: "https://www.linkedin.com/in/tannatsri/"
     },
