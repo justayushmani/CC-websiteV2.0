@@ -122,7 +122,7 @@ const ExPresident = () => {
 
     return (
       <div
-        className="relative w-full h-96 perspective-1000"
+        className="relative w-full h-80 perspective-1000"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
