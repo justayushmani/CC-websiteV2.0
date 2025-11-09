@@ -24,14 +24,14 @@ const About = () => {
           disabled={false} 
           speed={3} 
           className='about-title'
-          style={{ fontSize: '2.5rem', color: '#333' }}
+          style={{ fontSize: '3.5rem', color: '#1c1919', fontWeight: 700 }}
         />
         <ShinyText 
           text="Our Bawarchikhaana" 
           disabled={false} 
           speed={3} 
           className='about-subtitle'
-          style={{ fontSize: '3rem', color: '#333' }}
+          style={{ fontSize: '2.25rem', color: '#1c1919', fontWeight: 600 }}
         />
         <div className="about-text" style={{ color: '#444', fontSize: '1.1rem', lineHeight: '1.8' }}>
           <p><strong>CODECHEF ABESEC</strong> We are a group of programmers with a passion for coding and teamwork. 

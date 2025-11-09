@@ -13,7 +13,7 @@ const Offering = () => {
         </div>
         <div className="cards-container flex flex-row flex-wrap justify-center gap-6">
           <PinContainer title=" Coding WorkSpaces & Upskill" href="">
-            <div className="flex basis-full flex-col cards   bg-transparent backdrop-blur-sm p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[22rem] h-[25rem] ">
+            <div className="flex basis-full flex-col cards bg-transparent backdrop-blur-sm p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-full sm:w-[22rem] h-[25rem]">
               <h3 className="max-w-xs !pb-2 !m-0 font-bold text-start  text-base text-slate-100">
                 Coding WorkSpaces & Upskill
               </h3>
@@ -29,7 +29,7 @@ const Offering = () => {
           </PinContainer>
 
           <PinContainer title="Connect With Cool Mentors" href="">
-            <div className="flex basis-full flex-col cards  bg-transparent backdrop-blur-sm p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[22rem] h-[25rem] ">
+            <div className="flex basis-full flex-col cards  bg-transparent backdrop-blur-sm p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-full sm:w-[22rem] h-[25rem]">
               <h3 className="max-w-xs !pb-2 !m-0 font-bold text-start  text-base text-slate-100">
                 Connect With Cool Mentors
               </h3>
@@ -44,7 +44,7 @@ const Offering = () => {
           </PinContainer>
 
           <PinContainer title="Innovation Hub" href="">
-            <div className="flex basis-full flex-col cards  bg-transparent backdrop-blur-sm p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[22rem] h-[25rem] ">
+            <div className="flex basis-full flex-col cards  bg-transparent backdrop-blur-sm p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-full sm:w-[22rem] h-[25rem]">
               <h3 className="max-w-xs !pb-2 !m-0 font-bold text-start  text-base text-slate-100">
                 Innovation Hub
               </h3>
