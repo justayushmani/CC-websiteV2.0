@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Footer.css";
+import { Link } from "react-router-dom";
 import { FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
       <div className="footer-section footer-center">
         <nav className="footer-nav">
           <a href="#home" className="active">Home</a>
-          <a href="#events">Events</a>
+          <Link to="/events">Events</Link>
           <a href="#team">Team</a>
           <a href="#achievements">Achievements</a>
         </nav>

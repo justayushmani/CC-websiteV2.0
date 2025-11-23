@@ -16,7 +16,6 @@ export default function HomePage() {
       <Offering/>
       <ExPresident />
       <Footer />
-      
     </div>
   );
 }
