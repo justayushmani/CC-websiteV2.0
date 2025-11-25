@@ -6,9 +6,9 @@
   align-items: flex-start;
   padding: 80px 40px;
   width: 100vw;
-  /* max-width: 1200px; */
+  
   position: relative;
-  gap: 40px; 
+  gap: 30px; 
 }
 
 /* Shared section styles */
@@ -21,15 +21,19 @@
 }
 
 /* Left section */
+.footer-left{
+  margin-left:15px  ;
+}
 .footer-title h2 {
   margin: 0;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 700;
+  
 }
 
 .footer-title h3 {
   margin: 6px 0 0;
-  font-size: 42px;
+  font-size: 40px;
   color: #fff;
   font-weight: 700;
 }
@@ -40,7 +44,7 @@
   text-decoration: none;
   font-weight: bold;
   padding: 14px 20px;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 20px;
   transition: transform 0.2s ease;
   width: fit-content;
@@ -72,7 +76,7 @@
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 27px;
+  font-size: 25px;
   transition: color 0.2s ease;
 }
 
@@ -93,9 +97,9 @@
 /* Right section */
 .footer-right {
   align-items: flex-start;
-  text-align: right;
+  text-align: left;
   margin-top: -15px; 
-  margin-left: 80px;
+  margin-left: 20px;
 }
 
 .footer-address {
@@ -103,6 +107,7 @@
   color: #ddd;
   line-height: 1.6;
   text-align: left;
+  
 }
 
 .footer-social {

@@ -29,7 +29,7 @@ const Footer = () => {
       {/* Right Section */}
       <div className="footer-section footer-right">
         <p className="footer-address">
-          19th KM Stone, NH-09, Ghaziabad - 201009, Uttar Pradesh, India<br />
+          19th KM Stone, NH-09, Ghaziabad - 201009,<br></br> Uttar Pradesh, India<br />
           +91 120 713 5112
         </p>
         <div className="footer-social">
