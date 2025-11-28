@@ -2,13 +2,12 @@ import Footer from "../components/Footer";
 import useLenis from "../hooks/useLenis";
 import { BackgroundOverlayCard } from "../components/BackgroundOverlayCard";
 import { GridScan } from "../components/GridScan";
-import ClickSpark from "../components/ClickSpark";
-import ElectricBorder from "../components/ElectricBorder";
+
 
 const events = [
   {
     title: "CodeClash 2024",
-    href: "https://www.codechef.com/",
+    href: "/events/codeclash-2024",
     imageUrl:
       "https://codechefabesec.netlify.app/img/coc/1.webp",
     hoverImageUrl:
@@ -16,7 +15,7 @@ const events = [
   },
   {
     title: "Rust - Ed",
-    href: "#",
+    href: "/events/rust-ed",
     imageUrl:
       "https://codechefabesec.netlify.app/img/works/4/Rusted.webp",
     hoverImageUrl:
@@ -24,7 +23,7 @@ const events = [
   },
   {
     title: "Once Upon A Crime",
-    href: "#",
+    href: "/events/once-upon-a-crime",
     imageUrl:
       "https://codechefabesec.netlify.app/img/converted/crime.webp",
     hoverImageUrl:
@@ -32,7 +31,7 @@ const events = [
   },
    {
     title: "T-Error 3.0",
-    href: "#",
+    href: "/events/t-error-3",
     imageUrl:
       "https://codechefabesec.netlify.app/img/t_error/1.webp",
     hoverImageUrl:
@@ -40,7 +39,7 @@ const events = [
   },
    {
     title: "Byond Code",
-    href: "#",
+    href: "/events/byond-code",
     imageUrl:
       "https://codechefabesec.netlify.app/img/beyond_code/1.webp",
     hoverImageUrl:
@@ -48,7 +47,7 @@ const events = [
   },
    {
     title: "Head Node",
-    href: "#",
+    href: "/events/head-node",
     imageUrl:
       "https://codechefabesec.netlify.app/img/converted/headnode.webp",
     hoverImageUrl:
@@ -60,9 +59,8 @@ export default function EventsPage() {
   useLenis();
 
   return (
-    <ClickSpark sparkColor="#FF9FFC" sparkRadius={50} sparkCount={12}>
       <div className="w-full min-h-screen overflow-x-hidden bg-black text-white relative">
-        <div className="absolute inset-0 z-0">
+        <div className="fixed inset-0 z-0">
           <GridScan
             sensitivity={0.55}
             lineThickness={1}
@@ -86,25 +84,19 @@ export default function EventsPage() {
               <a
                 key={index}
                 href={event.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer" // You can remove this if you don't need it for internal links
                 className="w-full"
               >
-                <ElectricBorder
-                  color="#f09d0f"
-                  speed={1}
-                  chaos={0.7}
-                  thickness={2}
-                  style={{ borderRadius: "0.375rem" }} // Corresponds to rounded-md
-                >
-                  <BackgroundOverlayCard {...event} />
-                </ElectricBorder>
+                <BackgroundOverlayCard
+                  title={event.title}
+                  imageUrl={event.imageUrl}
+                  hoverImageUrl={event.hoverImageUrl}
+                />
               </a>
             ))}
           </div>
         </div>
         <Footer />
       </div>
-    </ClickSpark>
   );
 }
