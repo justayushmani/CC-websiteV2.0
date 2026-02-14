@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 
-// Japanese Katakana and Hiragana characters for shuffling
 const japaneseCharacters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンあいうえおかきくけこさしすせそ'
 
 const getRandomJapaneseChar = () => {
